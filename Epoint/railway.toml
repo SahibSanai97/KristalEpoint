@@ -1,0 +1,8 @@
+[build]
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "dotnet Epoint.dll"
+healthcheckPath = "/api/heartbeat"
+restartPolicyType = "on_failure"
